@@ -1,0 +1,190 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg78pcynyasl5"]
+
+[ext_resource type="Texture2D" uid="uid://ch7vvowyn3e4s" path="res://assets/ui/board_design.png" id="1_4vko3"]
+[ext_resource type="Script" uid="uid://djluan2dec4pg" path="res://scenes/board/BoardMarkerBuilder.gd" id="1_kmmm1"]
+[ext_resource type="Script" uid="uid://chy4r5fll5uyr" path="res://scripts/EventIconSpawner.gd" id="3_kmmm1"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_kmmm1")
+
+[node name="BoardImage" type="Sprite2D" parent="."]
+position = Vector2(360, 295.85)
+scale = Vector2(0.302521, 0.321378)
+texture = ExtResource("1_4vko3")
+
+[node name="TileMarkers" type="Node2D" parent="."]
+
+[node name="Tile1" type="Marker2D" parent="TileMarkers"]
+position = Vector2(48, 539)
+gizmo_extents = 30.0
+
+[node name="Tile2" type="Marker2D" parent="TileMarkers"]
+position = Vector2(152, 536)
+gizmo_extents = 30.0
+
+[node name="Tile3" type="Marker2D" parent="TileMarkers"]
+position = Vector2(256, 536)
+gizmo_extents = 30.0
+
+[node name="Tile4" type="Marker2D" parent="TileMarkers"]
+position = Vector2(360, 536)
+gizmo_extents = 30.0
+
+[node name="Tile5" type="Marker2D" parent="TileMarkers"]
+position = Vector2(456, 536)
+gizmo_extents = 30.0
+
+[node name="Tile6" type="Marker2D" parent="TileMarkers"]
+position = Vector2(568, 536)
+gizmo_extents = 30.0
+
+[node name="Tile7" type="Marker2D" parent="TileMarkers"]
+position = Vector2(672, 536)
+gizmo_extents = 30.0
+
+[node name="Tile8" type="Marker2D" parent="TileMarkers"]
+position = Vector2(672, 440)
+gizmo_extents = 30.0
+
+[node name="Tile9" type="Marker2D" parent="TileMarkers"]
+position = Vector2(568, 440)
+gizmo_extents = 30.0
+
+[node name="Tile10" type="Marker2D" parent="TileMarkers"]
+position = Vector2(456, 440)
+gizmo_extents = 30.0
+
+[node name="Tile11" type="Marker2D" parent="TileMarkers"]
+position = Vector2(360, 440)
+gizmo_extents = 30.0
+
+[node name="Tile12" type="Marker2D" parent="TileMarkers"]
+position = Vector2(256, 440)
+gizmo_extents = 30.0
+
+[node name="Tile13" type="Marker2D" parent="TileMarkers"]
+position = Vector2(152, 440)
+gizmo_extents = 30.0
+
+[node name="Tile14" type="Marker2D" parent="TileMarkers"]
+position = Vector2(40, 440)
+gizmo_extents = 30.0
+
+[node name="Tile15" type="Marker2D" parent="TileMarkers"]
+position = Vector2(40, 344)
+gizmo_extents = 30.0
+
+[node name="Tile16" type="Marker2D" parent="TileMarkers"]
+position = Vector2(152, 344)
+gizmo_extents = 30.0
+
+[node name="Tile17" type="Marker2D" parent="TileMarkers"]
+position = Vector2(256, 344)
+gizmo_extents = 30.0
+
+[node name="Tile18" type="Marker2D" parent="TileMarkers"]
+position = Vector2(360, 344)
+gizmo_extents = 30.0
+
+[node name="Tile19" type="Marker2D" parent="TileMarkers"]
+position = Vector2(456, 344)
+gizmo_extents = 30.0
+
+[node name="Tile20" type="Marker2D" parent="TileMarkers"]
+position = Vector2(568, 344)
+gizmo_extents = 30.0
+
+[node name="Tile21" type="Marker2D" parent="TileMarkers"]
+position = Vector2(672, 344)
+gizmo_extents = 30.0
+
+[node name="Tile22" type="Marker2D" parent="TileMarkers"]
+position = Vector2(672, 248)
+gizmo_extents = 30.0
+
+[node name="Tile23" type="Marker2D" parent="TileMarkers"]
+position = Vector2(568, 248)
+gizmo_extents = 30.0
+
+[node name="Tile24" type="Marker2D" parent="TileMarkers"]
+position = Vector2(456, 248)
+gizmo_extents = 30.0
+
+[node name="Tile25" type="Marker2D" parent="TileMarkers"]
+position = Vector2(360, 248)
+gizmo_extents = 30.0
+
+[node name="Tile26" type="Marker2D" parent="TileMarkers"]
+position = Vector2(256, 248)
+gizmo_extents = 30.0
+
+[node name="Tile27" type="Marker2D" parent="TileMarkers"]
+position = Vector2(152, 248)
+gizmo_extents = 30.0
+
+[node name="Tile28" type="Marker2D" parent="TileMarkers"]
+position = Vector2(48, 248)
+gizmo_extents = 30.0
+
+[node name="Tile29" type="Marker2D" parent="TileMarkers"]
+position = Vector2(48, 152)
+gizmo_extents = 30.0
+
+[node name="Tile30" type="Marker2D" parent="TileMarkers"]
+position = Vector2(152, 152)
+gizmo_extents = 30.0
+
+[node name="Tile31" type="Marker2D" parent="TileMarkers"]
+position = Vector2(256, 152)
+gizmo_extents = 30.0
+
+[node name="Tile32" type="Marker2D" parent="TileMarkers"]
+position = Vector2(360, 152)
+gizmo_extents = 30.0
+
+[node name="Tile33" type="Marker2D" parent="TileMarkers"]
+position = Vector2(456, 152)
+gizmo_extents = 30.0
+
+[node name="Tile34" type="Marker2D" parent="TileMarkers"]
+position = Vector2(568, 152)
+gizmo_extents = 30.0
+
+[node name="Tile35" type="Marker2D" parent="TileMarkers"]
+position = Vector2(664, 152)
+gizmo_extents = 30.0
+
+[node name="Tile36" type="Marker2D" parent="TileMarkers"]
+position = Vector2(664, 48)
+gizmo_extents = 30.0
+
+[node name="Tile37" type="Marker2D" parent="TileMarkers"]
+position = Vector2(568, 48)
+gizmo_extents = 30.0
+
+[node name="Tile38" type="Marker2D" parent="TileMarkers"]
+position = Vector2(456, 48)
+gizmo_extents = 30.0
+
+[node name="Tile39" type="Marker2D" parent="TileMarkers"]
+position = Vector2(352, 48)
+gizmo_extents = 30.0
+
+[node name="Tile40" type="Marker2D" parent="TileMarkers"]
+position = Vector2(256, 48)
+gizmo_extents = 30.0
+
+[node name="Tile41" type="Marker2D" parent="TileMarkers"]
+position = Vector2(152, 48)
+gizmo_extents = 30.0
+
+[node name="Tile42" type="Marker2D" parent="TileMarkers"]
+position = Vector2(48, 48)
+gizmo_extents = 30.0
+
+[node name="EventIcons" type="Node2D" parent="."]
+script = ExtResource("3_kmmm1")
+prob_moveup = null
+prob_hole = null
+prob_mini = null
+icon_scale = null

@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwxcieme5i13k"]
+
+[ext_resource type="Script" uid="uid://bcfr0ylbh6uy8" path="res://scenes/ui/MainMenu.gd" id="1_e2per"]
+[ext_resource type="Texture2D" uid="uid://cixys5l4fkncg" path="res://assets/ui/Press to sing!.png" id="1_vwgwj"]
+[ext_resource type="Texture2D" uid="uid://qrkjdsyp1qb8" path="res://assets/ui/By.png" id="2_1i3y7"]
+[ext_resource type="Texture2D" uid="uid://bm0fe1vliuvxj" path="res://assets/ui/fwdpeers_logo.png" id="3_mo3r7"]
+[ext_resource type="Texture2D" uid="uid://db2k732icaxe2" path="res://assets/ui/start_game.png" id="4_7jaac"]
+[ext_resource type="Texture2D" uid="uid://bgbsr2t3705bv" path="res://assets/ui/joing_game_button.png" id="5_mo3r7"]
+[ext_resource type="Texture2D" uid="uid://dcc02mkx0kc3t" path="res://assets/ui/creat_game_button.png" id="6_7jaac"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e2per")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 279.0
+offset_right = 720.0
+offset_bottom = 1001.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 80
+
+[node name="LogoContainers" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="FilipinOlympicsContainer" type="CenterContainer" parent="VBoxContainer/LogoContainers"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+
+[node name="Logo" type="TextureRect" parent="VBoxContainer/LogoContainers/FilipinOlympicsContainer"]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 2
+texture = ExtResource("1_vwgwj")
+expand_mode = 1
+
+[node name="FwdPeersContainer" type="CenterContainer" parent="VBoxContainer/LogoContainers"]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/LogoContainers/FwdPeersContainer"]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="By" type="TextureRect" parent="VBoxContainer/LogoContainers/FwdPeersContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 30)
+layout_mode = 2
+texture = ExtResource("2_1i3y7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TeamName" type="TextureRect" parent="VBoxContainer/LogoContainers/FwdPeersContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("3_mo3r7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="StartGameContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="StartGameButton" type="TextureButton" parent="VBoxContainer/VBoxContainer/StartGameContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+texture_normal = ExtResource("4_7jaac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HostingAndJoinGameContainer" type="CenterContainer" parent="VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HostingAndJoinGameContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="HostGameButton" type="TextureButton" parent="VBoxContainer/VBoxContainer/HostingAndJoinGameContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture_normal = ExtResource("5_mo3r7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="JoinGameButton" type="TextureButton" parent="VBoxContainer/VBoxContainer/HostingAndJoinGameContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture_normal = ExtResource("6_7jaac")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="IPLineEdit" type="LineEdit" parent="VBoxContainer/VBoxContainer/HostingAndJoinGameContainer"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/StartGameContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
