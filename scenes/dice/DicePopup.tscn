@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bghlg5ton71jq"]
+
+[ext_resource type="Script" uid="uid://bsjqmqlh7b2qe" path="res://scenes/dice/DicePopup.gd" id="1_buwuc"]
+[ext_resource type="Texture2D" uid="uid://bulvesy3ynyi0" path="res://assets/dice_faces/dice_1.png" id="1_doljm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgv50"]
+draw_center = false
+
+[node name="DicePopup" type="CanvasLayer"]
+script = ExtResource("1_buwuc")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hgv50")
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel"]
+layout_mode = 0
+offset_right = 727.0
+offset_bottom = 1263.0
+
+[node name="DiceFace" type="TextureRect" parent="Panel/CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("1_doljm")
+expand_mode = 1
+
+[node name="ShuffleTimer" type="Timer" parent="."]
+wait_time = 0.07
